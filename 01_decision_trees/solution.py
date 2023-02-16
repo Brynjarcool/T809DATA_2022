@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.metrics import accuracy_score, confusion_matrix
-import pretty_errors
 
 from tools import load_iris, split_train_test
 
@@ -182,6 +181,12 @@ class IrisTreeTrainer:
 # MAIN PART 
 features, targets, classes = load_iris()
 (f_1,t_1), (f_2,t_2) = split_data(features,targets, 2 ,4.65)
+
+print(f_1.shape, t_1.shape)
+
+print(f_2.shape, t_2.shape)
+
+
 
 dt = IrisTreeTrainer(features,targets,classes=classes)
 dt.train()

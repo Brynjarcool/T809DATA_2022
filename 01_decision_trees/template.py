@@ -4,13 +4,15 @@
 # Acknowledgements: 
 #
 
-
 from typing import Union
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier, plot_tree
 
 from tools import load_iris, split_train_test
+
+
+data = load_iris()
 
 
 def prior(targets: np.ndarray, classes: list) -> np.ndarray:
